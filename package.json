@@ -2,18 +2,17 @@
   "name": "authentication-nest-next",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "license": "MIT",
   "private": true,
   "workspaces": {
     "packages": [
-      "auth-next/*",
-      "auth-nest/*"
+      "apps/*",
+      "packages/*"
     ],
     "nohoist": [
-      "auth-next/**",
-      "auth-next/**/react",
-      "auth-next/**/next"
+      "**/auth-next/**",
+      "**/auth-next/**/react",
+      "**/auth-next/**/next"
     ]
   },
   "author": "Alexey Sazonov"
