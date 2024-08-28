@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React from "react";
-// import SignInButton from "./SignInButton";
+import SignInButton from "./SignInButton";
 
 const AppBar = () => {
   return (
-    <header className="flex gap-4 p-4 bg-gradient-to-b from-white to-gray-200 shadow">
+    <header className="flex gap-4 p-4 bg-gradient-to-b shadow items-center">
       <Link className="transition-colors hover:text-blue-500" href={"/"}>
         Home Page
       </Link>
@@ -12,7 +12,7 @@ const AppBar = () => {
         DashBoard
       </Link>
 
-      {/* <SignInButton /> */}
+      <SignInButton />
     </header>
   );
 };
