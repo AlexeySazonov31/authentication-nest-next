@@ -4,6 +4,8 @@ import { UserService } from 'src/user/user.service';
 import { compare } from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 
+const EXPIRE_TIME = 20 * 1000; // * change to 5 hours for production
+
 @Injectable()
 export class AuthService {
   constructor(
@@ -31,6 +33,7 @@ export class AuthService {
           expiresIn: '7d',
           secret: process.env.jwtRefreshTokenKey,
         }),
+        expiresIn: new Date().setTime(new Date().getTime() + EXPIRE_TIME),
       },
     };
   }
